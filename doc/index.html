@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title>Disease Diagnostics Tool</title>
+
+<link rel="stylesheet" type="text/css" href="pldoc.css">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+</head>
+<body>
+
+
+<h1 class="dir">Disease Diagnostics Tool</h1>
+
+<h2 class="wiki plfiles">Prolog files</h2>
+
+<table class="summary">
+<tr><th colspan="3" class="file"><span style="float:left"><a href="diagnose.html">diagnose.pl</a></span><span style="float:right"></span></th></tr>
+<tr class="public"><td><a href="/pldoc/doc_for?object=analyze_test_results/3">analyze_test_results/3</a></td><td class="summary">Returns list B containing disease elements in List1 whose tests match any element in A.</td><td align="right"><span style="white-space: nowrap"></span></td></tr>
+<tr class="public"><td><a href="/pldoc/doc_for?object=end/0">end/0</a></td><td class="summary">Outputs an exit message to the output stream.</td><td align="right"><span style="white-space: nowrap"></span></td></tr>
+<tr class="public"><td><a href="/pldoc/doc_for?object=find_diseases/2">find_diseases/2</a></td><td class="summary">Informs user of possible diseases.</td><td align="right"><span style="white-space: nowrap"></span></td></tr>
+<tr class="public"><td><a href="/pldoc/doc_for?object=format_string/2">format_string/2</a></td><td class="summary">Takes an incoming string, converts its contents to lowercase, splits the string at whitespaces into a list of words, and concats it back together with underscores.</td><td align="right"><span style="white-space: nowrap"></span></td></tr>
+<tr class="public"><td><a href="/pldoc/doc_for?object=get_test_results/1">get_test_results/1</a></td><td class="summary">Gathers test results from user input and returns it as a list.</td><td align="right"><span style="white-space: nowrap"></span></td></tr>
+<tr class="public"><td><a href="/pldoc/doc_for?object=getlist/1">getlist/1</a></td><td class="summary">Gets multiple lines of user input and returns it as a list of atoms.</td><td align="right"><span style="white-space: nowrap"></span></td></tr>
+<tr class="public"><td><a href="/pldoc/doc_for?object=give_treatments/1">give_treatments/1</a></td><td class="summary">Displays a list of treatments each disease element in List1.</td><td align="right"><span style="white-space: nowrap"></span></td></tr>
+<tr class="public"><td><a href="/pldoc/doc_for?object=match_all_symptoms/3">match_all_symptoms/3</a></td><td class="summary">Builds a set of symptoms from each element in List1, checks to see if all elements in that set are a subset of symptoms in Symp, and adds the head of List1 to Matching if so.</td><td align="right"><span style="white-space: nowrap"></span></td></tr>
+<tr class="public"><td><a href="/pldoc/doc_for?object=match_any_locale/3">match_any_locale/3</a></td><td class="summary">Builds a set of locales from each element in List1, checks to see if any element in that set is a subset of symptoms in Symp, and adds the head of List1 to Matching if so.</td><td align="right"><span style="white-space: nowrap"></span></td></tr>
+<tr class="public"><td><a href="/pldoc/doc_for?object=match_any_search/2">match_any_search/2</a></td><td class="summary">Returns true if any element of List1 is also in L, and false otherwise.</td><td align="right"><span style="white-space: nowrap"></span></td></tr>
+<tr class="public"><td><a href="/pldoc/doc_for?object=print_list/1">print_list/1</a></td><td class="summary">Writes each item in List1 to the output stream on its own line.</td><td align="right"><span style="white-space: nowrap"></span></td></tr>
+<tr class="public"><td><a href="/pldoc/doc_for?object=start/0">start/0</a></td><td class="summary">Program's driver.</td><td align="right"><span style="white-space: nowrap"></span></td></tr>
+<tr class="public"><td><a href="/pldoc/doc_for?object=test_search/2">test_search/2</a></td><td class="summary">Gaters a set of tests for each head element in List1 and appends said set to P.</td><td align="right"><span style="white-space: nowrap"></span></td></tr>
+<tr class="public"><td><a href="/pldoc/doc_for?object=user_input_tests/1">user_input_tests/1</a></td><td class="summary">Gathers tests results from user and returns a list of matching diseases.</td><td align="right"><span style="white-space: nowrap"></span></td></tr>
+<tr><th colspan="3" class="file"><span style="float:left"><a href="disease.html">disease.pl</a></span><span style="float:right"></span></th></tr>
+<tr class="public"><td><a href="/pldoc/doc_for?object=locale/2">locale/2</a></td><td class="summary">Describes the locales in which diseases are found.</td><td align="right"><span style="white-space: nowrap"></span></td></tr>
+<tr class="public"><td><a href="/pldoc/doc_for?object=symptom/2">symptom/2</a></td><td class="summary">Describes the symptoms associated with each disease.</td><td align="right"><span style="white-space: nowrap"></span></td></tr>
+<tr class="public"><td><a href="/pldoc/doc_for?object=test/2">test/2</a></td><td class="summary">Describes tests used to diagnose each disease.</td><td align="right"><span style="white-space: nowrap"></span></td></tr>
+<tr class="public"><td><a href="/pldoc/doc_for?object=treatment/2">treatment/2</a></td><td class="summary">Describes treatments for each disease.</td><td align="right"><span style="white-space: nowrap"></span></td></tr>
+</table>
+
+</body>
+</html>

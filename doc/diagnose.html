@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>diagnose.pl</title>
+
+<link rel="stylesheet" type="text/css" href="pldoc.css">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+</head>
+<body>
+
+
+<h1 class="file"><span style="float:right"></span>diagnose.pl</h1>
+
+<dl>
+<dt class="pubdef"><span style="float:right">&nbsp;</span><a name="format_string/2"><b class="pred">format_string</b><var class="arglist">(+In:string, -Out:atom)</var></a></dt><dd class="defbody">Takes an incoming string, converts its contents to lowercase,
+splits the string at whitespaces into a list of words, and concats
+it back together with underscores
+
+<dl class="tags">
+<dt class="tag">Arguments:</dt><dd>
+
+<table class="arglist">
+<tr><td><var>In</var></td><td class="argdescr">- The incoming string.</td></tr>
+<tr><td><var>Out</var></td><td class="argdescr">- Modified string as an atom.</td></tr>
+</table>
+
+</dd>
+</dl>
+
+</dd>
+<dt class="pubdef"><span style="float:right">&nbsp;</span><a name="print_list/1"><b class="pred">print_list</b><var class="arglist">(+List1:list)</var></a></dt><dd class="defbody">Writes each item in <var>List1</var> to the output stream on its own line.
+
+<dl class="tags">
+<dt class="tag">Arguments:</dt><dd>
+
+<table class="arglist">
+<tr><td><var>List1</var></td><td class="argdescr">- The list to have its contents written to output stream.</td></tr>
+</table>
+
+</dd>
+</dl>
+
+</dd>
+<dt class="pubdef"><span style="float:right">&nbsp;</span><a name="match_all_symptoms/3"><b class="pred">match_all_symptoms</b><var class="arglist">(+Symp:list, +List1:list, -Matching:list)</var></a></dt><dd class="defbody">Builds a set of symptoms from each element in <var>List1</var>, checks to see if
+all elements in that set are a subset of symptoms in <var>Symp</var>, and adds
+the head of <var>List1</var> to <var>Matching</var> if so.
+
+<dl class="tags">
+<dt class="tag">Arguments:</dt><dd>
+
+<table class="arglist">
+<tr><td><var>Symp</var></td><td class="argdescr">- List containing symptoms input by user.</td></tr>
+<tr><td><var>List1</var></td><td class="argdescr">- List containing all diseases in '<a class="file" href="disease.html">disease.pl</a>'.</td></tr>
+<tr><td><var>Matching</var></td><td class="argdescr">- List containing matching elements from <var>List1</var></td></tr>
+</table>
+
+</dd>
+</dl>
+
+</dd>
+<dt class="pubdef"><span style="float:right">&nbsp;</span><a name="match_any_search/2"><b class="pred">match_any_search</b><var class="arglist">(?List1:list, ?L:list)</var></a></dt><dd class="defbody">Returns true if any element of <var>List1</var> is also in <var>L</var>,
+and false otherwise.
+
+<dl class="tags">
+<dt class="tag">Arguments:</dt><dd>
+
+<table class="arglist">
+<tr><td><var>List1</var></td><td class="argdescr">- Contains elements to compare to <var>L</var>.</td></tr>
+<tr><td><var>L</var></td><td class="argdescr">- List that elements in <var>List1</var> are compared to.</td></tr>
+</table>
+
+</dd>
+</dl>
+
+</dd>
+<dt class="pubdef"><span style="float:right">&nbsp;</span><a name="match_any_locale/3"><b class="pred">match_any_locale</b><var class="arglist">(+Loc:list, +List1:list, -Matching:list)</var></a></dt><dd class="defbody">Builds a set of locales from each element in <var>List1</var>, checks to see if
+any element in that set is a subset of symptoms in Symp, and adds
+the head of <var>List1</var> to <var>Matching</var> if so.
+
+<dl class="tags">
+<dt class="tag">Arguments:</dt><dd>
+
+<table class="arglist">
+<tr><td><var>Loc</var></td><td class="argdescr">- List containing locales input by user.</td></tr>
+<tr><td><var>List1</var></td><td class="argdescr">- List containing all diseases in '<a class="file" href="disease.html">disease.pl</a>'.</td></tr>
+<tr><td><var>Matching</var></td><td class="argdescr">- List containing matching elements from <var>List1</var></td></tr>
+</table>
+
+</dd>
+</dl>
+
+</dd>
+<dt class="pubdef"><span style="float:right">&nbsp;</span><a name="test_search/2"><b class="pred">test_search</b><var class="arglist">(+List1:list, -P:list)</var></a></dt><dd class="defbody">Gaters a set of tests for each head element in <var>List1</var> and
+appends said set to <var>P</var>.
+
+<dl class="tags">
+<dt class="tag">Arguments:</dt><dd>
+
+<table class="arglist">
+<tr><td><var>List1</var></td><td class="argdescr">- Incoming list of diseases.</td></tr>
+<tr><td><var>P</var></td><td class="argdescr">- Outgoing list of tests.</td></tr>
+</table>
+
+</dd>
+</dl>
+
+</dd>
+<dt class="pubdef"><span style="float:right">&nbsp;</span><a name="get_test_results/1"><b class="pred">get_test_results</b><var class="arglist">(-R:list)</var></a></dt><dd class="defbody">Gathers test results from user input and returns it as a list.
+
+<dl class="tags">
+<dt class="tag">Arguments:</dt><dd>
+
+<table class="arglist">
+<tr><td><var>R</var></td><td class="argdescr">- List of tests user has designated as Positive.</td></tr>
+</table>
+
+</dd>
+</dl>
+
+</dd>
+<dt class="pubdef"><span style="float:right">&nbsp;</span><a name="analyze_test_results/3"><b class="pred">analyze_test_results</b><var class="arglist">(+A:list, +List1:list, -B:list)</var></a></dt><dd class="defbody">Returns list <var>B</var> containing disease elements in <var>List1</var> whose
+tests match any element in <var>A</var>.
+
+<dl class="tags">
+<dt class="tag">Arguments:</dt><dd>
+
+<table class="arglist">
+<tr><td><var>A</var></td><td class="argdescr">- List of positive tests</td></tr>
+<tr><td><var>List1</var></td><td class="argdescr">- List of possible diseases</td></tr>
+<tr><td><var>B</var></td><td class="argdescr">- List of diseases generated from <var>A</var> and <var>List1</var></td></tr>
+</table>
+
+</dd>
+</dl>
+
+</dd>
+<dt class="pubdef"><span style="float:right">&nbsp;</span><a name="getlist/1"><b class="pred">getlist</b><var class="arglist">(-Z:list)</var></a></dt><dd class="defbody">Gets multiple lines of user input and returns it as a list of atoms.
+
+<dl class="tags">
+<dt class="tag">Arguments:</dt><dd>
+
+<table class="arglist">
+<tr><td><var>Z</var></td><td class="argdescr">- List of user input.</td></tr>
+</table>
+
+</dd>
+</dl>
+
+</dd>
+<dt class="pubdef"><span style="float:right">&nbsp;</span><a name="start/0"><b class="pred">start</b></a></dt><dd class="defbody">Program's driver. Gets user input for symptoms and locations visited</dd>
+<dt class="pubdef"><span style="float:right">&nbsp;</span><a name="find_diseases/2"><b class="pred">find_diseases</b><var class="arglist">(+Sympt:list, +Local:list)</var></a></dt><dd class="defbody">Informs user of possible diseases.
+
+<dl class="tags">
+<dt class="tag">Arguments:</dt><dd>
+
+<table class="arglist">
+<tr><td><var>Sympt</var></td><td class="argdescr">- List containing symptoms input by user.</td></tr>
+<tr><td><var>Local</var></td><td class="argdescr">- List containing locales input by user.</td></tr>
+</table>
+
+</dd>
+</dl>
+
+</dd>
+<dt class="pubdef"><span style="float:right">&nbsp;</span><a name="user_input_tests/1"><b class="pred">user_input_tests</b><var class="arglist">(+Matcheddiseases:list)</var></a></dt><dd class="defbody">Gathers tests results from user and returns a list of matching
+diseases.
+
+<dl class="tags">
+<dt class="tag">Arguments:</dt><dd>
+
+<table class="arglist">
+<tr><td><var>Matcheddiseases</var></td><td class="argdescr">- List of possible diseases.</td></tr>
+</table>
+
+</dd>
+</dl>
+
+</dd>
+<dt class="pubdef"><span style="float:right">&nbsp;</span><a name="give_treatments/1"><b class="pred">give_treatments</b><var class="arglist">(+List1:list)</var></a></dt><dd class="defbody">Displays a list of treatments each disease element in <var>List1</var>
+
+<dl class="tags">
+<dt class="tag">Arguments:</dt><dd>
+
+<table class="arglist">
+<tr><td><var>List1</var></td><td class="argdescr">- A list of diseases.</td></tr>
+</table>
+
+</dd>
+</dl>
+
+</dd>
+<dt class="pubdef"><span style="float:right">&nbsp;</span><a name="end/0"><b class="pred">end</b></a></dt><dd class="defbody">Outputs an exit message to the output stream.</dd>
+</dl>
+
+</body>
+</html>
